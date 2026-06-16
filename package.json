@@ -1,0 +1,25 @@
+{
+  "name": "karent-admin-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "@directus/extensions-sdk": "^18.0.0",
+    "vue": "^3.5.38"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.1",
+    "@vitejs/plugin-vue": "^6.0.7",
+    "tailwindcss": "^4.3.1",
+    "vite": "^7.3.5"
+  }
+}
