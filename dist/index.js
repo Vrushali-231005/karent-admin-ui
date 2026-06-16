@@ -1,14 +1,5 @@
-import { openBlock as a, createElementBlock as c, defineComponent as p, createElementVNode as t, createTextVNode as d, unref as l, toDisplayString as h, normalizeClass as x, createBlock as _, Teleport as C, createVNode as m, Transition as y, withCtx as V, withModifiers as j, createCommentVNode as B, computed as g, ref as $, createApp as I } from "vue";
-const w = (o, n) => {
-  const r = o.__vccOpts || o;
-  for (const [s, e] of n)
-    r[s] = e;
-  return r;
-}, M = {};
-function A(o, n) {
-  return a(), c("div");
-}
-const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U = "Insurance document preview", E = "Insurance thumbnail", N = { class: "w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700" }, T = ["src", "alt"], H = { class: "flex-1 min-w-0" }, P = { class: "text-sm font-semibold text-white" }, R = /* @__PURE__ */ p({
+import { defineComponent as m, openBlock as d, createElementBlock as f, createElementVNode as t, createTextVNode as a, unref as l, toDisplayString as b, normalizeClass as x, createBlock as h, Teleport as C, createVNode as c, Transition as y, withCtx as V, withModifiers as _, createCommentVNode as j, computed as g, ref as B } from "vue";
+const I = "insurance-policy.pdf", $ = "Insurance document preview", M = "Insurance thumbnail", L = { class: "w-10 h-10 rounded-lg overflow-hidden flex-shrink-0 bg-slate-700" }, z = ["src", "alt"], A = { class: "flex-1 min-w-0" }, U = { class: "text-sm font-semibold text-white" }, E = /* @__PURE__ */ m({
   __name: "InsurancePreview",
   props: {
     imageUrl: {}
@@ -16,7 +7,7 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
   emits: ["preview"],
   setup(o, { emit: n }) {
     const r = n;
-    return (s, e) => (a(), c("div", null, [
+    return (s, e) => (d(), f("div", null, [
       e[3] || (e[3] = t("p", { class: "text-xs text-slate-500 uppercase tracking-widest font-semibold mb-3 flex items-center gap-2" }, [
         t("svg", {
           class: "w-3.5 h-3.5",
@@ -31,21 +22,21 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
             d: "M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"
           })
         ]),
-        d(" Insurance Document ")
+        a(" Insurance Document ")
       ], -1)),
       t("div", {
         class: "flex items-center gap-4 bg-slate-800 rounded-xl px-4 py-3 border border-slate-700 cursor-pointer hover:border-violet-500/50 transition-colors",
         onClick: e[0] || (e[0] = (i) => r("preview"))
       }, [
-        t("div", N, [
+        t("div", L, [
           t("img", {
             src: o.imageUrl,
-            alt: l(E),
+            alt: l(M),
             class: "w-full h-full object-cover"
-          }, null, 8, T)
+          }, null, 8, z)
         ]),
-        t("div", H, [
-          t("p", P, h(l(z)), 1),
+        t("div", A, [
+          t("p", U, b(l(I)), 1),
           e[1] || (e[1] = t("p", { class: "text-xs text-violet-400 mt-0.5 flex items-center gap-1" }, [
             t("svg", {
               class: "w-3 h-3",
@@ -66,7 +57,7 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
                 d: "M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"
               })
             ]),
-            d(" Click to preview full document ")
+            a(" Click to preview full document ")
           ], -1))
         ]),
         e[2] || (e[2] = t("svg", {
@@ -85,7 +76,7 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
       ])
     ]));
   }
-}), D = { class: "flex gap-3" }, O = /* @__PURE__ */ p({
+}), N = { class: "flex gap-3" }, T = /* @__PURE__ */ m({
   __name: "VerificationButtons",
   props: {
     isVerified: { type: Boolean }
@@ -93,7 +84,7 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
   emits: ["verify"],
   setup(o, { emit: n }) {
     const r = n;
-    return (s, e) => (a(), c("div", null, [
+    return (s, e) => (d(), f("div", null, [
       e[4] || (e[4] = t("p", { class: "text-xs text-slate-500 uppercase tracking-widest font-semibold mt-5 mb-3 flex items-center gap-2" }, [
         t("svg", {
           class: "w-3.5 h-3.5",
@@ -108,9 +99,9 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
             d: "M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
           })
         ]),
-        d(" Verification Action ")
+        a(" Verification Action ")
       ], -1)),
-      t("div", D, [
+      t("div", N, [
         t("button", {
           onClick: e[0] || (e[0] = (i) => r("verify", !0)),
           class: x([
@@ -131,7 +122,7 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
               d: "M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             })
           ], -1),
-          d(" Verified ", -1)
+          a(" Verified ", -1)
         ])], 2),
         t("button", {
           onClick: e[1] || (e[1] = (i) => r("verify", !1)),
@@ -153,12 +144,12 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
               d: "M10 14l2-2m0 0l2-2m-2 2l-2-2m2 2l2 2m7-2a9 9 0 11-18 0 9 9 0 0118 0z"
             })
           ], -1),
-          d(" Rejected ", -1)
+          a(" Rejected ", -1)
         ])], 2)
       ])
     ]));
   }
-}), S = { class: "relative max-w-2xl w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl" }, F = ["src", "alt"], W = /* @__PURE__ */ p({
+}), H = { class: "relative max-w-2xl w-full rounded-2xl overflow-hidden border border-white/10 shadow-2xl" }, P = ["src", "alt"], R = /* @__PURE__ */ m({
   __name: "InsuranceLightbox",
   props: {
     open: { type: Boolean },
@@ -167,20 +158,20 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
   emits: ["close"],
   setup(o, { emit: n }) {
     const r = n;
-    return (s, e) => (a(), _(C, { to: "body" }, [
-      m(y, { name: "fade" }, {
+    return (s, e) => (d(), h(C, { to: "body" }, [
+      c(y, { name: "fade" }, {
         default: V(() => [
-          o.open ? (a(), c("div", {
+          o.open ? (d(), f("div", {
             key: 0,
             class: "fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-6",
-            onClick: e[1] || (e[1] = j((i) => r("close"), ["self"]))
+            onClick: e[1] || (e[1] = _((i) => r("close"), ["self"]))
           }, [
-            t("div", S, [
+            t("div", H, [
               t("img", {
                 src: o.imageUrl,
-                alt: l(U),
+                alt: l($),
                 class: "w-full object-contain max-h-[85vh] bg-slate-950"
-              }, null, 8, F),
+              }, null, 8, P),
               t("button", {
                 class: "absolute top-3 right-3 w-8 h-8 rounded-full bg-black/60 flex items-center justify-center text-white hover:bg-black/80 transition-colors",
                 onClick: e[0] || (e[0] = (i) => r("close")),
@@ -201,56 +192,59 @@ const L = /* @__PURE__ */ w(M, [["render", A]]), z = "insurance-policy.pdf", U =
                 ], -1)
               ])])
             ])
-          ])) : B("", !0)
+          ])) : j("", !0)
         ]),
         _: 1
       })
     ]));
   }
-}), q = /* @__PURE__ */ w(W, [["__scopeId", "data-v-0d29afdc"]]);
-function G(o) {
+}), D = (o, n) => {
+  const r = o.__vccOpts || o;
+  for (const [s, e] of n)
+    r[s] = e;
+  return r;
+}, O = /* @__PURE__ */ D(R, [["__scopeId", "data-v-0d29afdc"]]);
+function S(o) {
   const n = g(() => o?.images?.[0]?.image || ""), r = g(() => o?.isVerified ?? !1);
   return {
     imageUrl: n,
     isVerified: r
   };
 }
-const J = { class: "bg-slate-900 rounded-2xl p-5 border border-slate-800" }, K = /* @__PURE__ */ p({
+const F = { class: "bg-slate-900 rounded-2xl p-5 border border-slate-800" }, W = /* @__PURE__ */ m({
   __name: "InsuranceCard",
   props: {
     value: {}
   },
   emits: ["update:value"],
   setup(o, { emit: n }) {
-    const r = o, s = n, { imageUrl: e, isVerified: i } = G(r.value), f = $(!1);
-    function k(v) {
+    const r = o, s = n, { imageUrl: e, isVerified: i } = S(r.value), p = B(!1);
+    function w(v) {
       s("update:value", { ...r.value, isVerified: v });
     }
-    return (v, u) => (a(), c("div", J, [
-      m(R, {
+    return (v, u) => (d(), f("div", F, [
+      c(E, {
         "image-url": l(e),
-        onPreview: u[0] || (u[0] = (b) => f.value = !0)
+        onPreview: u[0] || (u[0] = (k) => p.value = !0)
       }, null, 8, ["image-url"]),
-      m(O, {
+      c(T, {
         "is-verified": l(i),
-        onVerify: k
+        onVerify: w
       }, null, 8, ["is-verified"]),
-      m(q, {
-        open: f.value,
+      c(O, {
+        open: p.value,
         "image-url": l(e),
-        onClose: u[1] || (u[1] = (b) => f.value = !1)
+        onClose: u[1] || (u[1] = (k) => p.value = !1)
       }, null, 8, ["open", "image-url"])
     ]));
   }
-});
-I(L).mount("#app");
-const X = {
+}), G = {
   id: "insurance-card",
   name: "Insurance Card",
   icon: "verified",
-  component: K,
+  component: W,
   types: ["json"]
 };
 export {
-  X as default
+  G as default
 };
