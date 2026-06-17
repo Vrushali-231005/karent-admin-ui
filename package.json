@@ -1,8 +1,9 @@
 {
-  "name": "karent-admin-ui",
+  "name": "directus-extension-insurance-card",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -11,15 +12,20 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "module",
   "dependencies": {
-    "@directus/extensions-sdk": "^18.0.0",
     "vue": "^3.5.38"
   },
   "devDependencies": {
+    "@directus/extensions-sdk": "^18.0.0",
     "@tailwindcss/vite": "^4.3.1",
     "@vitejs/plugin-vue": "^6.0.7",
     "tailwindcss": "^4.3.1",
     "vite": "^7.3.5"
+  },
+  "directus:extension": {
+    "type": "interface",
+    "path": "dist/index.js",
+    "source": "src/index.ts",
+    "host": "^11.0.0"
   }
 }
